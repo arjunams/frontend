@@ -1,0 +1,20 @@
+		article{
+			background-color: green;
+			color:yellow;
+		}
+		header{
+			background-color: blue;
+			color:yellow;
+		}
+		footer{
+			background-color: blue;
+			color:yellow;
+		}
+		.cor-1{
+			background-color: white;
+			color:blue;
+		}
+		#cor-2{
+			background-color: green;
+			color:blue;
+		}
