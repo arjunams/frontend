@@ -33,11 +33,7 @@
 		.principal_default{	
 			height: calc(100% - 180px);
 			width: 90%;
-			margin-top: 5%;
-			margin-left: auto;
-			margin-right: auto;
-
-			
+			margin: 0 auto;
 		}
 
 
@@ -63,10 +59,40 @@
 			background: white;
 			width: 30%;
 			height: 90%;
-			margin: 10%, 0;
+			margin-top: 2.5%;
+			background-color:#F2F2F2; 
+			position: relative;
+			
+			
 
 		}
+		
+		.post_list{
+			float: left;
+			height: 90%;
+			width: 60%;			
+			background-color: white;
+			margin-top: 2.5%;
+			overflow: auto;
+			
+				
+			
 
+		}
+		.autores_list{
+			width: 90%;
+			height: 45%;
+			position: absolute
+			top: 0; 
+
+		}
+		.image_list{
+			height: 45%;
+			width: 90%;			
+			position: absolute;
+			bottom: 0;
+
+		}
 		.cor-1{
 			background-color: white;
 			color:blue;
@@ -74,24 +100,4 @@
 		#cor-2{
 			background-color: green;
 			color:blue;
-		}
-		.post_list{
-			height: 90%;
-			width: 60%;
-			float: left;
-			background-color: white;			
-			margin: 10%, 0;
-
-		}
-		.autores_list{
-			margin-top: 10%;
-			width: 100%;
-			background-color: red;
-			height: 35%;
-
-		}
-		.image_list{
-			height: 35%;
-			background-color: blue;
-			margin-top: 10%;
 		}

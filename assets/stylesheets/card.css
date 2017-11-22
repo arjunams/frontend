@@ -1,0 +1,14 @@
+.card{
+	background: #fff;
+	border: 1px dashed #f7f7f7;
+	
+	box-shadow: 09 3px 12px rgba(0,0,0,0.10);
+
+}
+.card-titulo{
+	text-transform: uppercase;
+	color: #999;
+	font-family: Tahoma;
+	font-size: 14px;
+	padding: 1rem;
+}
