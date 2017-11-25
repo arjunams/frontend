@@ -34,6 +34,9 @@
 			height: calc(100% - 180px);
 			width: 90%;
 			margin: 0 auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
 		}
 
 
@@ -47,23 +50,56 @@
 		header{	}
 		footer{	}
 		
-		aside{
+		aside{}
+
+		.artigos{
+			width: 90%;
+			margin: 5%;
+			list-style: none;			
+			padding: 0px;
 			
-			
+		}
+
+		.cicle{
+			width: 50px;	
+			height: 50px;
+			background: black;
+			display: inline-block;
+			position: absolute;  			
+			top: 50%;			
+			left: 50%;
+			margin-left: -25px;
+			margin-top:  -25px;
+
+			padding:0px;
+			border-radius: 50px ;
+		}
+
+		.artigo{
+			width: 100%;	
+			height: 100px;						
+			position: relative;
+			border-bottom: 1px solid black;	
+
+
 
 		}
 
+		.artigo:first-child { 	}
+
+		.artigo:last-child { border: none;  }
+
 
 		.aside_default{
-			float: right;
-			background: white;
+			float: right;			
+			display: flex;	
+			flex-direction:  column;
+			justify-content: space-between;		
 			width: 30%;
-			height: 90%;
-			margin-top: 2.5%;
-			background-color:#F2F2F2; 
-			position: relative;
-			
-			
+			height: 90%;						
+			margin-left: 2.5%;			
+			overflow: hidden;
+								
 
 		}
 		
@@ -71,26 +107,21 @@
 			float: left;
 			height: 90%;
 			width: 60%;			
-			background-color: white;
-			margin-top: 2.5%;
-			overflow: auto;
+			background-color: white;			
+			overflow: auto;				
 			
-				
-			
-
 		}
 		.autores_list{
-			width: 90%;
+			width: 100%;
 			height: 45%;
-			position: absolute
-			top: 0; 
+			align-self: flex-start;
 
 		}
 		.image_list{
 			height: 45%;
-			width: 90%;			
-			position: absolute;
-			bottom: 0;
+			width: 100%;
+			align-self: flex-end;
+
 
 		}
 		.cor-1{
