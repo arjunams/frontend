@@ -40,20 +40,74 @@
 <footer class="footer_default"></footer>	
 </body>
 <script>
-	function sum(var1,var2){
-		return "Resultado "+var1+" + "+var2+" = "+(var1+var2);
+	
+	 
+
+
+
+	function soma(var1,var2){
+			
+		var varInte1 = var1;	
+		var varInte2 = var2;	
+
+		if ( 'number' == typeof(var1) )  {
+			if ( 'number' == typeof(var2) )  {
+				return "Resultado "+var1+" + "+var2+" = "+(var1+var2);	
+
+			}else{
+			   console.log('Digite um valor numérico para o segundo campo');
+			};			
+
+		}else{
+		   console.log('Digite um valor numérico para o primeiro campo');
+		}	
+
+		
 	}
 
-	function minus(var1,var2){
-		return "Resultado "+var1+" - "+var2+" = "+(var1-var2);
+	function menos(var1,var2){
+		
+		if ( 'number' == typeof(var1) )  {
+			if ( 'number' == typeof(var2) )  {
+				return "Resultado "+var1+" - "+var2+" = "+(var1-var2);
+
+			}else{
+			   console.log('Digite um valor numérico para o segundo campo');
+			};			
+
+		}else{
+		   console.log('Digite um valor numérico para o primeiro campo');
+		}	
 	}	
 
-	function div(var1,var2){
-		return "Resultado "+var1+" / "+var2+" = "+(var1/var2);
+	function divi(var1,var2){
+		
+		if ( 'number' == typeof(var1) )  {
+			if ( 'number' == typeof(var2) )  {
+				return "Resultado "+var1+" / "+var2+" = "+(var1/var2);
+
+			}else{
+			   console.log('Digite um valor numérico para o segundo campo');
+			};			
+
+		}else{
+		   console.log('Digite um valor numérico para o primeiro campo');
+		}
 	}	
 
 	function multi(var1,var2){
-		return "Resultado "+var1+" * "+var2+" = "+(var1*var2);
+		
+		if ( 'number' == typeof(var1) )  {
+			if ( 'number' == typeof(var2) )  {
+				return "Resultado "+var1+" * "+var2+" = "+(var1*var2);
+
+			}else{
+			   console.log('Digite um valor numérico para o segundo campo');
+			};			
+
+		}else{
+		   console.log('Digite um valor numérico para o primeiro campo');
+		}
 	}
 
 

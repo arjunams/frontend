@@ -3,6 +3,51 @@
 			padding: 0px;
 		}
 
+
+		.box{
+			
+			width: 300px;
+			height: 200px;
+
+			border: 1px solid black;
+			background: gray;
+		}
+
+		.colunaEsq{
+			width: 33%;
+			
+		}
+
+		.colunaMeio{
+			width: 33%;
+			
+		}
+
+		.colunaDir{
+			width: 34%;
+			
+		}
+
+		.visorResultado{
+			height: 90%;
+			width: 30%;
+			background: white;
+			display:  left;
+
+		}
+		.visorValores{
+			height: 90%;
+			width: 30%;
+
+
+		}
+
+		.visorTeclas{
+			height: 90%;
+			width: 30%;
+
+		}
+
 		.header_default, 		
 		.footer_default{ width: 100% }
 
@@ -28,6 +73,16 @@
 			font: normal,16px, sans-serif;
 			*/
 						
+		}
+
+		.principal_2{				
+			width: 90%;
+			margin: 0 auto;
+			/*
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			*/
 		}
 
 		.principal_default{	
