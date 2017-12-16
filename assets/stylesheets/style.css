@@ -13,9 +13,20 @@
 			background: gray;
 		}
 
+		.button-def{
+			width: 30px;
+			height: 30px;
+			margin-left: 1px
+		}
+
+		.btnLimpar{
+			width: 60px;
+			height: 30px;
+		}
+
 		.colunaEsq{
 			width: 33%;
-			
+			display: block;
 		}
 
 		.colunaMeio{
@@ -44,7 +55,7 @@
 
 		.visorTeclas{
 			height: 90%;
-			width: 30%;
+			width: 72px;
 
 		}
 
@@ -55,7 +66,7 @@
 		body{
 			width: 100%;
 			height: 100%;
-			background: #F2F2F2;
+			background: #E2F2F2;
 		}
 
 		.header_default{
@@ -68,6 +79,7 @@
 		.header_default h1{
 			color: white;			
 			padding: 10px;
+			text-align: center
 
 			/*
 			font: normal,16px, sans-serif;
@@ -78,6 +90,8 @@
 		.principal_2{				
 			width: 90%;
 			margin: 0 auto;
+			display: flex;
+			flex-direction: row;
 			/*
 			display: flex;
 			flex-direction: row;
@@ -100,6 +114,11 @@
 			background-color: #eeeeee;
 		}
 
+		h1{
+			text-align: center;
+
+		}
+
 		article{ }
 
 		header{	}
@@ -109,34 +128,43 @@
 
 		.artigos{
 			width: 90%;
-			margin: 5%;
+			height: 100%;
+			margin: 0 5%;
 			list-style: none;			
-			padding: 0px;
-			
+						
 		}
 
-		.cicle{
-			width: 50px;	
-			height: 50px;
-			background: black;
+		.artigo {
 			display: inline-block;
-			position: absolute;  			
-			top: 50%;			
-			left: 50%;
-			margin-left: -25px;
-			margin-top:  -25px;
+			padding: 1rem 0;
+			border-bottom: 1px dashed #dedede;
 
-			padding:0px;
-			border-radius: 50px ;
 		}
 
-		.artigo{
-			width: 100%;	
-			height: 100px;						
-			position: relative;
-			border-bottom: 1px solid black;	
+		.artigo h3{
+			margin: 0 0 10px 0;
+			font: 300 1.3rem "Helveltica";
+			color: orange;
+			text-transform: capitalize;
+		}
+
+		.artigo p{
+			line-height: 1.5;
+			font-size: .9rem;
+			text-align: justify;
+		}
+		.artigo span{
+			float: right;
+			margin: 1rem 0;
+			color: gray;
+			font-size: .75rem;
+			text-transform: uppercase;
 
 
+		}
+
+
+		.artigo-lista{
 
 		}
 

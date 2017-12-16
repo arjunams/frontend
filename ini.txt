@@ -1,3 +1,5 @@
+vitoleandro@gmail.com
+98832-9767
 git init
 git config user.name
 git status
