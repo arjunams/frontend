@@ -8,7 +8,6 @@
 .card-titulo{
 	text-transform: uppercase;
 	color: #999;
-	font-family: Tahoma;
-	font-size: 14px;
+	font-family: Tahoma, sans-serif;
 	padding: 1rem;
 }

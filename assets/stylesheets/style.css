@@ -164,6 +164,52 @@
 		}
 
 
+		.autores{
+			width: 90%;
+			height: 100%;
+			margin: 0 5%;
+			list-style: none;		
+						
+		}
+
+		.autor{
+			display: inline-block;
+			width: 100%;
+			height: 50px;
+			margin-bottom: 20px;
+			border-bottom: 1px dotted #dedede: 
+									
+		}
+
+		.autor_avatar{
+			float: left;
+			width: 32px;
+			height: 32px;
+			margin:  0 20px 0 0;
+			background-color: #bbb;
+			border-radius: 40%;
+						
+						
+		}
+		.info_autor {
+			display: inline-block;
+		}
+
+		.info_autor span {
+			font-weight: bold;
+			font-size: .65rem
+			text-transform: lowercase;
+		}	
+
+		.info_autor span:first-child {
+			font-weight: bold;
+			font-size: .75rem
+			text-transform: uppercase;
+			color: #464A4F;
+		}		
+	
+
+
 		.artigo-lista{
 
 		}
@@ -189,14 +235,15 @@
 		.post_list{
 			float: left;
 			height: 90%;
-			width: 60%;			
-			background-color: white;			
+			width: 60%;		
+			margin-right: 5%;	
 			overflow: auto;				
 			
 		}
 		.autores_list{
 			width: 100%;
 			height: 45%;
+			overflow: auto;	
 			align-self: flex-start;
 
 		}

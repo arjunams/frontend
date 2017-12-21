@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -6,7 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="assets/stylesheets/card.css">
 
 	<title></title>
-
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
 
 </head>
 
@@ -17,39 +19,7 @@
 <main class="principal_default  ">
 	<article class="card post_list "> 
 		<h3 class="card-titulo">Listas de Posts</h3>
-		<ul class="artigos" >	
-			
-			<li class="artigo">
-				<h3>Título   fasdçofiuKAÇOSD</h3>
-								
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-								
-				<span>  data postagem com utc</span>							
-			
-			</li>
-			<li class="artigo">
-				<h3>Título  sdfaosidfsf fasdçofiuKAÇOSD</h3>
-								
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-								
-				<span>  data postagadfsdf sdfg 5678em com utc</span>							
-			
-			</li>		
-						
+		<ul class="artigos">
 		</ul>		
 
 	</article>
@@ -57,6 +27,10 @@
 	<aside class="aside_default ">		
 		<article class="card autores_list ">
 			<h3 class="card-titulo">Listas de autores</h3>
+			<ul class="autores">			
+				
+				
+			</ul>
 		</article>
 		<article class="card image_list card">
 			<h3 class="card-titulo">Listas de imagens</h3>
@@ -65,6 +39,85 @@
 </main>
 <footer class="footer_default"></footer>	
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/app.js"</script>
+<script>
+(function (window, document){
+		
+		const URI_POSTS = "https://jsonplaceholder.typicode.com/posts";
+		const URI_USERS = "https://jsonplaceholder.typicode.com/users";
+		
+		getPosts(URI_POSTS);
+		getAutores(URI_USERS);
+
+	})(window, document);
+
+	function getPosts(URI){
+		$.getJSON(URI, function(data){
+
+			let items = [];
+
+			$.each(data, function(key,val)	{
+				items.push(postDom(key,val));
+			});
+
+			
+			$("<ul/>",{
+				"class": "artigos",
+				html: items.join("")
+			}).appendTo(".artigos");
+			
+
+
+		});
+	}
+
+	function postDom(key,value){
+
+		let now = Date();
+		let post =
+				'<li class="artigo"> '+
+					' <h3>'+value.title +'</h3>'+
+					' <p>'+value.body +'</p>'+
+					' <span>'+ now +'</span>'+
+				'</li>';
+
+		return post;		
+	}
+
+
+	function getAutores(URI){
+
+		$.getJSON(URI, function(data){
+
+			console.log(data);
+
+			let items =[];
+			let el = document.querySelector('.autores');
+
+			for (let i in data){
+				items.push(autorDom(data[i]));
+
+			}
+
+			el.innerHTML = items.join("");
+
+		});
+	}
+
+	function autorDom(item){
+		let autor = 
+		'<li class="autor">'+
+		  '<div class="autor_avatar"> </div>'+
+		  '<div class="info_autor"> '+
+		    '<span>' +item.username + '</span><br/>'+
+		    '<span>' +item.email + '</span>'+
+		  '</div>'+
+		'</li>';
+
+		return autor;
+
+	}
+
+</script>
+
+
 </html>	
